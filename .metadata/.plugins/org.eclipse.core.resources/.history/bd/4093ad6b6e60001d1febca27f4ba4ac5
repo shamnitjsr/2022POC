@@ -1,0 +1,6 @@
+package in.shambhu.rest;
+
+@RestController
+public class WelcomeRestController {
+
+}

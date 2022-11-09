@@ -1,0 +1,14 @@
+package in.shambhu.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeRestController {
+	
+	public String getMsg() {
+		
+		String msg = "Welcome to Ashok IT .....";
+		return msg;
+	}
+
+}
