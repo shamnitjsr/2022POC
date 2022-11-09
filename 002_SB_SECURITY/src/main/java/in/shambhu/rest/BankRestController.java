@@ -30,7 +30,7 @@ public class BankRestController {
 	@GetMapping("/contact")
 	public String contact() {
 		
-		String msg = "YThankYou for connecting customer support, we will get back to you";
+		String msg = "ThankYou for connecting customer support, we will get back to you";
 		return msg;
 	}
 
