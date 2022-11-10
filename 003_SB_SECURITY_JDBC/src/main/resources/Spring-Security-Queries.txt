@@ -1,0 +1,22 @@
+create table user_dtls 
+(
+ 
+ user_id integer,
+ user_name varchar(30), 
+ user_pwd varchar(100), 
+ user_role varchar(20), 
+ user_enabled integer
+ 
+);
+
+INSERT INTO user values(101,'devs','$2a$10$qnOB2PH1CqRvw8f5epvHzOlrounRkVGi.Y5ho6ENdmj/C1DmPdAsy','ADMIN',1);
+INSERT INTO user values(102,'ns','$2a$10$mmUMC5ZwoVnEQYV7/R6m.uWWtj7EiIo3lKasBObkOCc12huVUWpMC','EMPLOYEE',1);
+INSERT INTO user values(103,'vs','$2a$10$kqEC/fhQ7SNDhnncOQ9pb.yXXxJ/c7a1SQx2QPNZ.47fUmvF3Wb.i','MANAGER',1);
+
+Query#1 : Retrieve username,password,enabled using username ;
+
+♦ select user_name,user_pwd,user_enabled from user_dtls where user_name=?;
+
+Query#2 : Retrieve username,role using username;
+
+♦ select user_name,user_role from user_dtls where user_name=?;
