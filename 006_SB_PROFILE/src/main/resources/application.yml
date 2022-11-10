@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active: qa
+
+---
+ 
+spring:
+  profile: dev
+  datasource:
+    username: IES_DEV
+    password: IES_DEV
+    url: jdbc:oracle:thin:@localhost:1521/XE
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+     
+---
+
+spring:
+   profile: qa
+   datasource:
+     username: IES_QA
+     password: IES_QA
+     url: jdbc:oracle:thin:@localhost:1521/XE
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+     
+---
+
+spring:
+   profile: uat
+   datasource:
+     username: IES_UAT
+     password: IES_UAT
+     url: jdbc:oracle:thin:@localhost:1521/XE
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+
+---
+
+spring:
+   profile: prod
+   datasource:
+     username: IES_PROD
+     password: IES_PROD
+     url: jdbc:oracle:thin:@localhost:1521/XE
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+
+---
