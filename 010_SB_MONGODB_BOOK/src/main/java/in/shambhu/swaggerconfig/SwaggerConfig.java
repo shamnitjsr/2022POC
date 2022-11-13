@@ -16,7 +16,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket apiDoc() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("in.ashokit.rest")).paths(PathSelectors.any()).build();
+				.apis(RequestHandlerSelectors.basePackage("in.shambhu.rest")).paths(PathSelectors.any()).build();
 
 	}
 }
