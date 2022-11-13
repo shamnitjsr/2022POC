@@ -1,0 +1,31 @@
+git remote -v
+git branch
+git branch -r
+git branch -a
+===================================================================================================
+ run as ---maven build ----goal -----clean package
+ 
+ https://springbootbucket260.s3.ap-south-1.amazonaws.com/009_SB_AWS-0.0.1-SNAPSHOT.jar
+ =================================================================================================
+ s3://springbootbucket260/009_SB_AWS-0.0.1-SNAPSHOT.jar
+ =================================================================================================
+ sudo su
+ yum install java-1.8.0-openjdk
+java -version
+java -jar 009_SB_AWS-0.0.1-SNAPSHOT.jar
+===================================================================================================
+===================================================================================================
+MongoDB
+------------------------
+show dbs
+use mydb
+db
+use testdb
+show collections;
+db.employee.insert({"eid": 101, "ename" : "Ashokit", "esal" : 898000})
+db.dropDatabase()
+db.createCollection("AIT")
+show collections
+db.AIT.insert({"name" : "Ashok IT"})
+db.AIT.find();
+===================================================================================================   
