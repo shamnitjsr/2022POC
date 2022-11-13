@@ -1,4 +1,3 @@
-
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Source Code Repository Tools (or) Version Control Softwares
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -10,7 +9,6 @@ Source Code Repository Tools (or) Version Control Softwares
 -> All developers code should be store at one place (Code Integration Should Happen)
 
 -> To integrate all the developers source code at one place we will use Sourcecode Repository Softwares
-
 
 Advantages with Source code repository sofwares
 ++++++++++++++++++++++++++++++++++++++++++++++
@@ -43,8 +41,6 @@ Environment Setup to work with Git Hub
 2) Download and install Git Client software ( https://git-scm.com/downloads )
 
 3) Once installation completed, right click on the mouse and verify git options display (If git options displaying our git client installation completed successfully)
-
-
 
 Working with GitHub
 +++++++++++++++++++
@@ -94,11 +90,6 @@ Configure Your Email and Name in GitBash with Commands
 $ git config --global user.email "youremail@yourdomain.com"
 
 $ git config --global user.name "name"
-
-
-
-
-
 
 
 $ git init : To initialize our folder as git working tree folder
