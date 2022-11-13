@@ -208,6 +208,7 @@ git log
 git remote add 
 git pull
 --------------------------------------------------------------------------------------------------------
+git add Employee.java
 
 When we are working on one task suddenly we may get some other priority task.
 
