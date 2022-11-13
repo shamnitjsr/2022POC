@@ -299,6 +299,11 @@ Steps to do branch merging
 
 Note: Once feature branch changes are merged to main branch then we can delete feature branch (if required)
 
+==========================================================================================================================================
+Branch Swiching develop branch to main branch---No need to clone all branch code need to checkout command
+git checkout main
+===========================================================================================================================================
+
 +++++++++++
 What is .gitignore ?
 +++++++++++
