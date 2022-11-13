@@ -1,0 +1,24 @@
+public final class Employee{
+
+	private final String panCard;
+	
+	public Employee(String panCard)
+		{
+			this.panCard = panCard;
+		}
+		
+	public String getPanCard()
+	{
+		return panCard;
+	}
+}
+
+public class ImmutableDemo
+{
+    psvm()
+	{
+		Employee employee = new Employee("ABC345");
+		String panNUmaber = employee.getPancard();
+		Syso(panNUmaber);
+	}
+}

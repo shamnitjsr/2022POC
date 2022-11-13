@@ -1,0 +1,89 @@
+FROM
+MAINTAINER
+COPY
+ADD
+RUN
+CMD
+ENTRYPOINT
+ENV
+LABEL
+USER
+WORKDIR
+EXPOSE
+VOLUME
+================================================
+
+FROM ubuntu
+
+MAINTAINER Ashok<ashokit@gmail.com>
+
+RUN echo "this is first run statement"
+
+RUN echo "this is second run statement"
+
+CMD echo "this is first CMD statement"
+
+RUN echo "this is third run statement"
+
+CMD echo "this is second CMD statement"
+
+CMD echo "this is third CMD statement"
+=====================================================================================
+FROM tomcat:10.0.26-jre8
+
+COPY target/01-maven-web-app.war /user/local/tomcat/webapps/maven-web-app.war
+
+EXPOSE 8080
+
+=====================================================================================
+FROM openjdk:11
+
+COPY spring-boot-docker-app.jar /user/app/
+
+WORKDIR /user/app
+
+ENTRYPOINT ["java","-jar","spring-boot-docker-app.jar"]
+
+======================================================================================
+FROM openjdk:8
+EXPOSE 8080
+ADD target/spring-boot-mysql.jar spring-boot-mysql.jar
+ENTRYPOINT ["java","-jar","/spring-boot-mysql.jar"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
