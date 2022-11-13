@@ -232,6 +232,9 @@ Usecase
 
 -> After priority work completed we can get stashed changes back using 'gitstash apply'
 
+Git stash
+git stash apply
+
 
 +++++++++++
 Git Branches
