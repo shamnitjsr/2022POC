@@ -299,6 +299,11 @@ Steps to do branch merging
 
 Note: Once feature branch changes are merged to main branch then we can delete feature branch (if required)
 
+==========================================================================================================================================
+Branch Swiching develop branch to main branch---No need to clone all branch code need to checkout command
+git checkout main
+===========================================================================================================================================
+
 +++++++++++
 What is .gitignore ?
 +++++++++++
@@ -369,6 +374,7 @@ What is git pull command
 
 Note: When we execute 'git pull' there is a chance of getting conflicts. We need to resolve the conflict and we should push the code without conflicts.
 
+Git fetch ---command is used to changes available or not 
 --------------------------------------------------------------------------------------------------
 What is Source Code repository
 Why we need source code repository
