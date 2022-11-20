@@ -24,6 +24,7 @@ public class EligibilityDetails {
 	private String planStatus;
 	private LocalDate planStartDate;
 	private LocalDate planEndDate;
+	
 	private LocalDate createDate;
 	private LocalDate updateDate;
 	private String createdBy;
