@@ -10,8 +10,10 @@ import org.axonframework.queryhandling.QueryGateway;
 import org.axonframework.spring.stereotype.Saga;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import in.shambhu.command.ShipOrderCommand;
 import in.shambhu.command.ValidatePaymentCommand;
 import in.shambhu.command.api.events.OrderCreatedEvent;
+import in.shambhu.command.events.PaymentProcessedEvent;
 import in.shambhu.model.User;
 import in.shambhu.queries.GetUserPaymentDetailsQuery;
 import lombok.extern.slf4j.Slf4j;
@@ -48,14 +50,30 @@ public class OrderProcessingSaga {
 			// Start the Compensating transaction
 		}
 
-		ValidatePaymentCommand validatePaymentCommand = ValidatePaymentCommand
-				.builder()
-				.cardDetails(user.getCardDetails())
-				.orderId(event.getOrderId())
-				.paymentId(UUID.randomUUID().toString())
+		ValidatePaymentCommand validatePaymentCommand = ValidatePaymentCommand.builder()
+				.cardDetails(user.getCardDetails()).orderId(event.getOrderId()).paymentId(UUID.randomUUID().toString())
 				.build();
-		
+
 		commandGateway.sendAndWait(validatePaymentCommand);
+	}
+
+	@SagaEventHandler(associationProperty = "orderId")
+	private void handle(PaymentProcessedEvent event) {
+
+		log.info("PaymentProcessedEvent in Saga for Order Id : {}", event.getOrderId());
+		
+		try {
+			ShipOrderCommand shipOrderCommand = ShipOrderCommand
+					.builder()
+					.shipmentId(UUID.randomUUID().toString())
+					.orderid(event.getOrderId())
+					.build();
+			commandGateway.send(shipOrderCommand);
+		} catch (Exception e) {
+			
+			log.error(e.getMessage());
+			//Start the compensating transaction
+		}
 	}
 
 }
